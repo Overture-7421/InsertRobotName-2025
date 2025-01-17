@@ -12,6 +12,8 @@
 #include <OvertureLib/Robots/OverRobot/OverRobot.h>
 #include "RobotContainer.h"
 
+#include "Subsystems/Servo/Servo.h"
+
 class Robot: public OverRobot {
 public:
     Robot();
@@ -33,4 +35,6 @@ private:
     frc2::Command *m_autonomousCommand;
 
     RobotContainer m_container;
+
+    Servo servo;
 };

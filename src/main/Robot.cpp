@@ -32,6 +32,7 @@ Robot::Robot() {
 
 void Robot::RobotPeriodic() {
     m_container.UpdateTelemetry();
+
 }
 
 void Robot::DisabledInit() {
@@ -61,9 +62,11 @@ void Robot::TeleopInit() {
     if (m_autonomousCommand) {
         m_autonomousCommand->Cancel();
     }
+
 }
 
 void Robot::TeleopPeriodic() {
+    servo.servoAngleCommand(100_deg);
 }
 
 void Robot::TeleopExit() {
